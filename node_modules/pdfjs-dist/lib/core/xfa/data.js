@@ -1,8 +1,8 @@
 /**
  * @licstart The following is the entire license notice for the
- * Javascript code in this page
+ * JavaScript code in this page
  *
- * Copyright 2021 Mozilla Foundation
+ * Copyright 2022 Mozilla Foundation
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
  * limitations under the License.
  *
  * @licend The above is the entire license notice for the
- * Javascript code in this page
+ * JavaScript code in this page
  */
 "use strict";
 
@@ -38,7 +38,7 @@ class DataHandler {
     const stack = [[-1, this.data[_xfa_object.$getChildren]()]];
 
     while (stack.length > 0) {
-      const last = stack[stack.length - 1];
+      const last = stack.at(-1);
       const [i, children] = last;
 
       if (i + 1 === children.length) {

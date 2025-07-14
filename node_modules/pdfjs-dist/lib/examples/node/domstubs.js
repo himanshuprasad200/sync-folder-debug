@@ -1,8 +1,8 @@
 /**
  * @licstart The following is the entire license notice for the
- * Javascript code in this page
+ * JavaScript code in this page
  *
- * Copyright 2021 Mozilla Foundation
+ * Copyright 2022 Mozilla Foundation
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
  * limitations under the License.
  *
  * @licend The above is the entire license notice for the
- * Javascript code in this page
+ * JavaScript code in this page
  */
 "use strict";
 
@@ -121,6 +121,15 @@ DOMElement.prototype = {
   },
   setAttributeNS: function DOMElement_setAttributeNS(NS, name, value) {
     this.setAttribute(name, value);
+  },
+  append: function DOMElement_append(...elements) {
+    const childNodes = this.childNodes;
+
+    for (const element of elements) {
+      if (!childNodes.includes(element)) {
+        childNodes.push(element);
+      }
+    }
   },
   appendChild: function DOMElement_appendChild(element) {
     const childNodes = this.childNodes;
