@@ -22,7 +22,7 @@ function processQueue() {
 // Dummy Express-like request and response
 const req = {
   body: {
-    folderPath: "C:\\Users\\YourName\\Documents\\ResumeFolder", // ✅ Change to your actual test folder
+    folderPath: ",/resumes", // ✅ Change to your actual test folder
   },
 };
 
